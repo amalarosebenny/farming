@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="card text-center">
+  <div class="card-header">
+    Education
+  </div>
+  <div class="card-body">
+    <h3 class="card-text">To continue, click here</h3>
+    <a href="{% url 'accounts:create_view' %}" class="btn btn-primary">Next</a>
+  </div>
+</div>
+</div>
+{%  endblock %}

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block metadescription %}
+    {% if department %}
+     {{ department.desc|truncatewords:155}}
+    {% else %}
+      Welcome to St.Joseph's Academy...
+    {% endif %}
+{% endblock %}
+{% block title %}
+{% if department %}
+   {{ department.name}}-St.Joseph's Academy
+{% else %}
+   St.Joseph's Academy
+{% endif %}
+{% endblock %}
+{% block content %}
+<div>
+  <img  class=" my_image my_image_padding" src="{% static 'img/banar.png' %}" alt="Our Courses" width="1500px;" height="600px;">
+</div>
+<br>
+<div>
+    <h1 class="text-center my_title">Our Mission</h1>
+    <p class="text-justify">A college education can prepare you to transition to a new field. it's a proven fact that college degree is correlated to lower unemployment rates. Improvement in Confidence and awareness is another milestone possible due to college. The college inculcates the sense of responsibility in nature and habit of the student.College education is a stepping stone in higher education for any person. Not only is it essential for knowledge gain, but also for the development and further honing of skills for meeting future career goals.Some of the prime reasons for considering going for higher education in colleges are given here.</p>
+</div>
+<br>
+<div>
+    <h1 class="text-center my_title">About Us</h1>
+    <p class="text-justify">College is the place where one can get higher education for achieving his or her career goal. College is indeed necessary for each and every one. Thus for a successful career, the student needs knowledge, confidence, academic and technical skills, career opportunities and social skills.</p>
+</div>
+<div>
+    <a href="{% url 'accounts:login' %}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Login</a>
+</div>
+
+{%  endblock %}
